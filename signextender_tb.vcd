@@ -1,0 +1,36 @@
+$date
+	Thu May  7 15:41:57 2015
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module signextender_tb $end
+$var wire 32 ! result [31:0] $end
+$var reg 16 " n [15:0] $end
+$scope module ex $end
+$var wire 16 # in [15:0] $end
+$var wire 32 $ out [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx $
+bx #
+bx "
+bx !
+$end
+#1
+b1101010101011 !
+b1101010101011 $
+b1101010101011 "
+b1101010101011 #
+#2
+b11111111111111111001101010101011 !
+b11111111111111111001101010101011 $
+b1001101010101011 "
+b1001101010101011 #
+#4

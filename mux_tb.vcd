@@ -1,0 +1,73 @@
+$date
+	Thu May  7 15:21:00 2015
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module mux_tb $end
+$var wire 4 ! out4 [3:0] $end
+$var wire 32 " out32 [31:0] $end
+$var reg 32 # n32_0 [31:0] $end
+$var reg 32 $ n32_1 [31:0] $end
+$var reg 4 % n4_0 [3:0] $end
+$var reg 4 & n4_1 [3:0] $end
+$var reg 1 ' select $end
+$scope module m32 $end
+$var wire 32 ( n0 [31:0] $end
+$var wire 32 ) n1 [31:0] $end
+$var wire 1 ' select $end
+$var wire 32 * result [31:0] $end
+$upscope $end
+$scope module m4 $end
+$var wire 4 + n0 [3:0] $end
+$var wire 4 , n1 [3:0] $end
+$var wire 1 ' select $end
+$var wire 4 - result [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx -
+bx ,
+bx +
+bx *
+bx )
+bx (
+x'
+bx &
+bx %
+bx $
+bx #
+bx "
+bx !
+$end
+#1
+bx1 !
+bx1 -
+b0x01x0xxxxxx10 "
+b0x01x0xxxxxx10 *
+b1011 &
+b1011 ,
+b101 %
+b101 +
+b1011000101110 $
+b1011000101110 )
+b10011010010 #
+b10011010010 (
+#2
+b10011010010 "
+b10011010010 *
+b101 !
+b101 -
+0'
+#3
+b1011000101110 "
+b1011000101110 *
+b1011 !
+b1011 -
+1'
+#5
