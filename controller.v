@@ -66,47 +66,6 @@ module controller (opcode, funct, RegDst, MemRead, MemtoReg, ALUop, MemWrite, AL
                     SLTI:   ALUop = SLT;
                 endcase
             end
-/*
-            ADDI: begin
-                ALUop       = ADD;
-            end
-            ANDI: begin
-                RegDst      = 1'b0; 
-                ALUsrc      = 1'b1; 
-                MemtoReg    = 1'b0; 
-                RegWrite    = 1'b1; 
-                MemRead     = 1'b0; 
-                MemWrite    = 1'b0; 
-                ALUop       = AND;
-            end
-            ORI: begin
-                RegDst      = 1'b0; 
-                ALUsrc      = 1'b1; 
-                MemtoReg    = 1'b0; 
-                RegWrite    = 1'b1; 
-                MemRead     = 1'b0; 
-                MemWrite    = 1'b0; 
-                ALUop       = OR;
-            end
-            XORI: begin
-                RegDst      = 1'b0; 
-                ALUsrc      = 1'b1; 
-                MemtoReg    = 1'b0; 
-                RegWrite    = 1'b1; 
-                MemRead     = 1'b0; 
-                MemWrite    = 1'b0; 
-                ALUop       = XOR;
-            end
-            SLTI: begin
-                RegDst      = 1'b0; 
-                ALUsrc      = 1'b1; 
-                MemtoReg    = 1'b0; 
-                RegWrite    = 1'b1; 
-                MemRead     = 1'b0; 
-                MemWrite    = 1'b0; 
-                ALUop       = SLT;
-            end
-*/
         endcase
     end
 
