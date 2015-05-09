@@ -1,6 +1,8 @@
 module reg_tb;
-    reg     [5:0]   index;
-    wire    [31:0]  result, waste;
+    reg     [4:0]   i1, i2, wa;
+    wire    [31:0]  o1, o2;
+    reg             w;
+    reg     [31:0]  wd;
     reg             clk = 0;
 
     initial begin
@@ -8,19 +10,36 @@ module reg_tb;
         $dumpvars(0, reg_tb);
 
         #1
-        for (index = 0; index < 32 ; index = index + 1) begin
-            #2 ;
-        end
+        w = 1;
+        wa = 15;
+        wd = 1234;
+        #2
+        i1 = 15;
+        w = 0;
+        wa = 0;
+        wd = 0;
+        #2
+        w = 1;
+        wa = 30;
+        wd = 56781;
+        #2
+        i1 = 30;
+        i2 = 15;
+        w = 0;
+        wa = 0;
+        wd = 0;
+
+
 
         #2 $finish;
     end
 
     always #1 clk <= !clk;
 
-    register regtest (5'd0, 32'd0, index[4:0], result, 5'd0, waste, 1'b0, clk);
+    register regtest(wa, wd, i1, o1, i2, o2, w, clk);
 
     initial begin
-        $monitor("clk = %b : n = %d : result = %d", clk, index, result);
+        $monitor("reg1[%d] = %d : reg2[%d] = %d : write? = %b : regw[%d] = %d", i1, o1, i2, o2, w, wa, wd);
     end
 
 

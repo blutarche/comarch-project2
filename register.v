@@ -8,7 +8,7 @@ module register (write_addr, write_data, read_addr1, read_data1, read_addr2, rea
 
     initial begin
         for (k = 0; k < 32; k = k + 1) begin
-            registers[k] = k;
+            registers[k] = 32'h0000_0000;
         end
     end
 
