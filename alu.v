@@ -29,7 +29,7 @@ module alu(
 	// 1001 10		A ^ B								XOR
 	//	1001 11		~(A | B)							NOR
 	//
-	//	101 XX0		signed(A) < signed(B)		Set-Less-Than signed
+	//	101 XX0		signed(A) < signed(B)				Set-Less-Than signed
 	//	101 XX1		A < B								Set-Less-Than unsigned
 
 	// 111 000		A									BLTZ
