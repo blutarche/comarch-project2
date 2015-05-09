@@ -13,6 +13,7 @@ module controller (opcode, funct, RegDst, MemRead, MemtoReg, ALUop, MemWrite, AL
     parameter ORI       = 6'b001101;
     parameter XORI      = 6'b001110;
     parameter SLTI      = 6'b001010;
+    parameter SLTIU     = 6'b001001;
 
     parameter ADD       = 6'b100000;
     parameter SUB       = 6'b100010;
@@ -20,8 +21,9 @@ module controller (opcode, funct, RegDst, MemRead, MemtoReg, ALUop, MemWrite, AL
     parameter OR        = 6'b100101;
     parameter XOR       = 6'b100110;
     parameter SLT       = 6'b101010;
+    parameter SLTU      = 6'b101001;
 
-    always @(opcode) begin
+    always @(*) begin
         case (opcode)
             R_FORMAT: begin
                 RegDst      = 1'b1; 
@@ -64,6 +66,7 @@ module controller (opcode, funct, RegDst, MemRead, MemtoReg, ALUop, MemWrite, AL
                     ORI:    ALUop = OR;
                     XORI:   ALUop = XOR;
                     SLTI:   ALUop = SLT;
+                    SLTIU:  ALUop = SLTU;
                 endcase
             end
         endcase

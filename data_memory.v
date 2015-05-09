@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-`include "./async_memory.v"
+`include "async_memory.v"
 `include "serial_buf.v"
 
 /*

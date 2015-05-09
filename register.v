@@ -3,7 +3,7 @@ module register (write_addr, write_data, read_addr1, read_data1, read_addr2, rea
     input   [31:0]  write_data;
     input           write, clk;
     output  [31:0]  read_data1,read_data2;
-    reg     [31:0]  registers [0:31];
+    reg     signed [31:0]  registers [0:31];
     reg     [5:0]   k;
 
     initial begin

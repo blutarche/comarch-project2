@@ -42,6 +42,7 @@ module processor(clock, reset, serial_in, serial_valid_in, serial_ready_in, seri
         .data_out(inst)
         );
 
+
     wire            RegDst, MemRead, MemtoReg, MemWrite, ALUsrc, RegWrite;
     wire    [5:0]   ALUfunc;
     controller control(
