@@ -1,4 +1,6 @@
 `timescale 1ns / 1ps
+`include "./async_memory.v"
+`include "serial_buf.v"
 
 /*
 **  UCSD CSE 141L Lab2/3 Provided Module
@@ -42,10 +44,10 @@ module data_memory(
 	output				serial_wren_out
 );
 
-parameter INIT_PROGRAM0 = "/home/tk/Desktop/verilog/projVerilog/test/data_ram0.memh";
-parameter INIT_PROGRAM1 = "/home/tk/Desktop/verilog/projVerilog/test/data_ram1.memh";
-parameter INIT_PROGRAM2 = "/home/tk/Desktop/verilog/projVerilog/test/data_ram2.memh";
-parameter INIT_PROGRAM3 = "/home/tk/Desktop/verilog/projVerilog/test/data_ram3.memh";
+parameter INIT_PROGRAM0 = "/Users/blutarche/Documents/Computer Architecture/Project2/test/data_ram0.memh";
+parameter INIT_PROGRAM1 = "/Users/blutarche/Documents/Computer Architecture/Project2/test/data_ram1.memh";
+parameter INIT_PROGRAM2 = "/Users/blutarche/Documents/Computer Architecture/Project2/test/data_ram2.memh";
+parameter INIT_PROGRAM3 = "/Users/blutarche/Documents/Computer Architecture/Project2/test/data_ram3.memh";
 
 
 	wire	[31:0]	data_readdata_serial;

@@ -13,10 +13,10 @@ wire [31:0] ret1;
 wire [31:0] ret2;
 wire [31:0] ret3;
 wire [31:0] ret4;
-assign ret1 = dut.regis_mod.r[10];
-assign ret2 = dut.regis_mod.r[11];
-assign ret3 = dut.regis_mod.r[12];
-assign ret4 = dut.regis_mod.r[13];
+assign ret1 = dut.regis_mod.registers[10];
+assign ret2 = dut.regis_mod.registers[11];
+assign ret3 = dut.regis_mod.registers[12];
+assign ret4 = dut.regis_mod.registers[13];
 
 
 //Generate clock at 100 MHz

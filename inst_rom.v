@@ -19,7 +19,7 @@ module inst_rom (
 	output [31:0] data_out
 );
 	parameter ADDR_WIDTH=8;
-	parameter INIT_PROGRAM="/home/tk/Desktop/verilog/projVerilog/test/inst_rom.memh";
+	parameter INIT_PROGRAM="/Users/blutarche/Documents/Computer Architecture/Project2/test/inst_rom.memh";
 
 	reg [31:0] rom [0:2**ADDR_WIDTH-1];
 	reg [31:0] out;
