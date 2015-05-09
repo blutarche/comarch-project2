@@ -69,6 +69,4 @@ module controller (opcode, funct, RegDst, MemRead, MemtoReg, ALUop, MemWrite, AL
         endcase
     end
 
-
-
 endmodule
