@@ -42,9 +42,9 @@ module controller (opcode, funct, RegDst, MemRead, MemtoReg, ALUop, MemWrite, AL
                 ALUop       = ADD; 
             end
             SW: begin
-                RegDst      = 1'b1; 
+                RegDst      = 1'bx; 
                 ALUsrc      = 1'b1; 
-                MemtoReg    = 1'b1; 
+                MemtoReg    = 1'bx; 
                 RegWrite    = 1'b0; 
                 MemRead     = 1'b0; 
                 MemWrite    = 1'b1;

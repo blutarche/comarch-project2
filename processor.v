@@ -101,6 +101,7 @@ module processor(clock, reset, serial_in, serial_valid_in, serial_ready_in, seri
         .Jump_out(jump)
         );
 
+    wire    [31:0]  memOUT;
     data_memory mem (
         .clock(clock),
         .reset(reset),
@@ -109,7 +110,7 @@ module processor(clock, reset, serial_in, serial_valid_in, serial_ready_in, seri
         .re_in(MemRead),
         .we_in(MemWrite),
         .size_in(2'b11),
-        .readdata_out(write_data),
+        .readdata_out(memOUT),
         
         .serial_in(serial_in),
         .serial_ready_in(serial_ready_in),
@@ -117,6 +118,13 @@ module processor(clock, reset, serial_in, serial_valid_in, serial_ready_in, seri
         .serial_out(serial_out),
         .serial_rden_out(serial_rden_out),
         .serial_wren_out(serial_wren_out)
+        );
+
+    mux #(32) mux_mem (
+        .n0(aluOUT),
+        .n1(memOUT),
+        .select(MemtoReg),
+        .result(write_data)
         );
 
 
