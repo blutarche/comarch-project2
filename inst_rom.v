@@ -37,7 +37,6 @@ module inst_rom (
 			out = 32'h00000000;
 		end else begin
 			out = rom[addr_in[ADDR_WIDTH+1:2]];
-			$display ("op: %b",{out[7:0],out[15:8],out[23:16],out[31:24]});
 		end
 	end
 

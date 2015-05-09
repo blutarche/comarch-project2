@@ -29,6 +29,9 @@ module processor(clock, reset, serial_in, serial_valid_in, serial_ready_in, seri
         if (reset) begin
             pc <= PC_START;
         end
+        else if (inst==32'h00000000) begin
+            $finish;
+        end
         else begin
             pc <= tmp_pc;
         end
