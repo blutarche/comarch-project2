@@ -4,6 +4,13 @@ module register (write_addr, write_data, read_addr1, read_data1, read_addr2, rea
     input           write, clk;
     output  [31:0]  read_data1,read_data2;
     reg     [31:0]  registers [0:31];
+    reg             k;
+
+    initial begin
+        for (k = 0; k < 32; k = k + 1) begin
+            registers[k] = 32'h0000_0000;
+        end
+    end
 
     always @(posedge clk) begin
         if (write) begin
