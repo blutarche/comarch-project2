@@ -1,0 +1,31 @@
+$date
+	Sat May  9 18:19:59 2015
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module adder_tb $end
+$var wire 32 ! result [31:0] $end
+$var reg 32 " n [31:0] $end
+$scope module add4 $end
+$var wire 32 # i [31:0] $end
+$var wire 32 $ o [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx $
+bx #
+bx "
+bx !
+$end
+#1
+b10010011 !
+b10010011 $
+b10001111 "
+b10001111 #
+#3
