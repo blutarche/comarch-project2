@@ -25,7 +25,7 @@ module processor(clock, reset, serial_in, serial_valid_in, serial_ready_in, seri
     initial pc = PC_START;
     adder add4 (.i(pc), .o(tmp_pc));
 
-    always @(posedge clock or posedge reset) begin
+    always @(negedge clock or posedge reset) begin
         if (reset) begin
             pc <= PC_START;
         end
